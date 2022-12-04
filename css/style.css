@@ -1,0 +1,298 @@
+/* PART 1: Write these rules on your own. */
+
+body{
+  /* make all text courier, set margin and padding to 10px */
+  font-family: 'Noto Sans', sans-serif;
+  display: grid;
+  margin: 10px;
+  padding: 10px;
+  grid-template-columns: 1fr;
+  background-image: url('../images/camo-black.png');
+  background-color: #333333;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+}
+
+nav{
+  background-color: #5c42ff;
+}
+
+h1{
+  /* make your headers 32px, #128ded color and bold */
+  font-size: 70px;
+  color: #ff8307;
+  font-weight: bold;
+}
+
+h2{
+  /* make your headers 32px, #128ded color and bold */
+  font-size: 50px;
+  color: #0acef7;
+  font-weight: bold;
+}
+
+h3{
+  /* make your headers 32px, #128ded color and bold */
+  font-size: 30px;
+  color: #b9e713;
+  font-weight: bold;
+}
+
+p{
+  /* make your paragraphs 14pt, double-spaced and 10px of padding on the left and right */
+  font-size: 25pt;
+  line-height: 2;
+  padding: 0 10px;
+  color: azure;
+}
+
+
+/* Part 2: And now debug..... */
+a{
+  /* make your links red, use italics, and be underlined */
+  color: white;
+  font-weight: 800;
+  text-decoration: underline;
+  font-size: large;
+}
+
+
+a:hover{
+  /* make the background color of your link black and the text white when you hover over it */
+  color: #ffff00;
+  /* background-color: #00f8a2; */
+}
+
+
+img{
+  padding: 10px;
+  /* max-height: 80%; */
+  margin: 10px 10px;
+  border: 15px inset #f71ebe;
+  width: 600px;
+
+}
+
+
+
+.homepage .gallery .characters .weapon {
+  text-decoration-color: pink;
+}
+
+img:hover {
+  transform: scaleX(-1);
+}
+
+ul{
+  /* make links stacked */
+  display: flex;
+  height: 300px;
+  text-align: center;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  background-image: url('../images/tapes-purple.jpg');
+}
+
+nav a {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.head-img{
+  width: 800px;
+}
+.sticker-1{
+  width: 300px;
+  border: none;
+  animation: zoom-in-zoom-out 1s 1 alternate forwards;
+}
+
+.sticker-2{
+  width:auto;
+  height:250px;
+  border: none;
+  animation: zoom-in-zoom-out 1s 1 alternate forwards;
+}
+
+.sticker-box{
+  display: flex;
+  justify-content:center;
+  align-items: flex-end;
+}
+
+.head-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skip a{
+  background: rgb(0, 0, 0);
+  font-size: 30px;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: relative;
+  left: 20px;
+  top: -100px;
+}
+.skip a:focus{
+  top: 0px;
+}
+
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .sticker{
+  animation: none;}
+}
+
+
+.footer{
+  /* style the footer so it has a black background and white text */
+  color: white;
+  background-color: black;
+}
+
+.gallery{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weaponimg-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weaponimg-box p{
+  font-size: 30pt;
+}
+
+.charactersimg-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+aside {
+  width: 40%;
+  padding-left: .5rem;
+  margin-left: .5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+}
+
+aside > p {
+  margin: .5rem;}
+
+form{
+  width:300px;
+}
+
+
+/*Tablet view*/
+@media all and (min-width: 480px){
+  li{
+    min-width:40%;
+  }
+  ul{
+    /* make links Arranged horizontally */
+    
+    flex-wrap: wrap;
+    height: 200px;
+   
+    flex-direction: row;
+   
+ 
+  }
+
+
+
+}
+/*Desktop view*/
+@media all and (min-width: 1500px){
+  li{
+    min-width:25%;
+  }
+  ul{
+  /* make links stacked */
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100px;
+  text-align:center;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  background-image: url('../images/tapes-purple.jpg');
+}
+
+.charactersimg-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 50px;
+}
+
+.callietxt {
+grid-column: 2;
+grid-row: 1;
+}
+
+#callie_box {
+border: #5c42ff 10px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+grid-column: 1;
+grid-row: 1;
+}
+
+#marie_box{
+border: #5c42ff 10px;
+display: flex;
+flex-direction: column;
+grid-column: 1;
+grid-row: 2;
+}
+
+.marietxt{
+grid-column: 2;
+grid-row: 2;
+}
+/* for galler part*/
+.gallery{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galleryimg1{
+  height: 480px;
+  max-width:40%;
+}
+
+
+}
+
+
+
+
+
+
